@@ -1,5 +1,46 @@
 /* hello */
 
 body {
-    background-image: url("../images/barbellBackgroundImage.jpg");
+	/*background-image: url("../images/barbellBackgroundImage.jpg");*/
+	background-color: grey;
 }
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.3fr 1.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Banner Banner Banner"
+    "Dashboard Dashboard Dashboard"
+    "Dashboard Dashboard Dashboard";
+}
+
+.Banner {
+	grid-area: Banner;
+	background-color: red;
+	}
+
+.Dashboard {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Name Name Name Name"
+    "Recent-Reps Calendar Timer Add-Reps"
+    "Recent-Reps Calendar Timer View-Reps";
+  grid-area: Dashboard;
+}
+
+.Recent-Reps { grid-area: Recent-Reps; }
+
+.Calendar { grid-area: Calendar; }
+
+.Timer { grid-area: Timer; }
+
+.Add-Reps { grid-area: Add-Reps; }
+
+.View-Reps { grid-area: View-Reps; }
+
+.Name { grid-area: Name; }
