@@ -38,6 +38,50 @@
 
 			<div class="Add-Reps">
 				<!--Pop Up Here-->
+				<div class="box">
+					<a href="divOne" class="button">Add Rep</a>
+				</div>
+
+				<div class="overlay" id="divOne">
+					<div class="wrapper">
+						<h2>Add Your Repetitions</h2>
+
+						<form>
+							<!-- User input for Exercise Category-->
+							<label for="exerciseCategory">Category</label>
+							<select name="categories" id="exerciseCategory">
+								<option value="squat">Squat-Type Movement</option>
+								<option value="horizontalPress">Horizontal Press</option>
+								<option value="verticalPress">Vertical Press</option>
+								<option value="horizontalPull">Horizontal Pull</option>
+								<option value="verticalPull">Vertical Pull</option>
+							</select>
+
+							<!-- User input for Name of Exercise-->
+							<label for="exerciseName">Exercise</label>
+							<input type="text" id="exerciseName" name="exerciseName">
+
+							<!-- User input for Exercise Difficulty-->
+							<label for="exerciseDifficulty">Difficulty</label>
+							<select name="difficulty" id="exerciseDifficulty">
+								<option value="1">1 - Very Easy</option>
+								<option value="2">2 - Easy</option>
+								<option value="3">3 - Neutral</option>
+								<option value="4">4 - Difficult</option>
+								<option value="5">5 - Very Difficult</option>
+							</select>
+
+							<!-- User input for Number of Reptitions-->
+							<label for="numberOfRepetitions">Repetitions</label>
+							<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0">
+
+							<!-- User input for Duration of Exercise-->
+							<!-- Timer function needed here-->
+							
+						</form>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="View-Reps">
