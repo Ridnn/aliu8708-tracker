@@ -38,8 +38,8 @@
 			<div class="Add-Reps">
 				<!--Pop Up Here-->
 				<!--Button to show hide the form to submit reps-->
-				
-				<div id="divOne" class="hidden">
+				<button open-modal>Add Reps Modal</button>
+				<dialog>
 					<h2>Add Your Repetitions</h2>
 					<form>
 						<!-- User input for Exercise Category-->
@@ -71,12 +71,16 @@
 						<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0">
 
 						<!-- User input for Duration of Exercise-->
+						<label for="durationOfRepetitions">Duration</label>
+						<input type="number" name="durationOfRepetitions" id="durationOfRepetitions" min="0">
+
 						<!-- Timer function needed here-->
-							
+						<input type="submit" value="Submit">
 					</form>
-				</div>
+					<button close-modal>Cancel</button>
+				</dialog>
 				
-				<button id="toggleElement">Add Reps</button>
+				
 			</div>
 			
 
