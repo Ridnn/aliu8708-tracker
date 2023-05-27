@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
-	<script src="script.js"></script>
 </head>
 
 <body>
@@ -38,51 +37,48 @@
 
 			<div class="Add-Reps">
 				<!--Pop Up Here-->
-				<div class="box">
-					<a href="divOne" class="button">Add Rep</a>
-				</div>
+				<!--Button to show hide the form to submit reps-->
+				
+				<div id="divOne" class="hidden">
+					<h2>Add Your Repetitions</h2>
+					<form>
+						<!-- User input for Exercise Category-->
+						<label for="exerciseCategory">Category</label>
+						<select name="categories" id="exerciseCategory">
+							<option value="squat">Squat-Type Movement</option>
+							<option value="horizontalPress">Horizontal Press</option>
+							<option value="verticalPress">Vertical Press</option>
+							<option value="horizontalPull">Horizontal Pull</option>
+							<option value="verticalPull">Vertical Pull</option>
+						</select>
 
-				<div class="overlay" id="divOne">
-					<div class="wrapper">
-						<h2>Add Your Repetitions</h2>
+						<!-- User input for Name of Exercise-->
+						<label for="exerciseName">Exercise</label>
+						<input type="text" id="exerciseName" name="exerciseName">
 
-						<form>
-							<!-- User input for Exercise Category-->
-							<label for="exerciseCategory">Category</label>
-							<select name="categories" id="exerciseCategory">
-								<option value="squat">Squat-Type Movement</option>
-								<option value="horizontalPress">Horizontal Press</option>
-								<option value="verticalPress">Vertical Press</option>
-								<option value="horizontalPull">Horizontal Pull</option>
-								<option value="verticalPull">Vertical Pull</option>
-							</select>
+						<!-- User input for Exercise Difficulty-->
+						<label for="exerciseDifficulty">Difficulty</label>
+						<select name="difficulty" id="exerciseDifficulty">
+							<option value="1">1 - Very Easy</option>
+							<option value="2">2 - Easy</option>
+							<option value="3">3 - Neutral</option>
+							<option value="4">4 - Difficult</option>
+							<option value="5">5 - Very Difficult</option>
+						</select>
 
-							<!-- User input for Name of Exercise-->
-							<label for="exerciseName">Exercise</label>
-							<input type="text" id="exerciseName" name="exerciseName">
+						<!-- User input for Number of Reptitions-->
+						<label for="numberOfRepetitions">Repetitions</label>
+						<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0">
 
-							<!-- User input for Exercise Difficulty-->
-							<label for="exerciseDifficulty">Difficulty</label>
-							<select name="difficulty" id="exerciseDifficulty">
-								<option value="1">1 - Very Easy</option>
-								<option value="2">2 - Easy</option>
-								<option value="3">3 - Neutral</option>
-								<option value="4">4 - Difficult</option>
-								<option value="5">5 - Very Difficult</option>
-							</select>
-
-							<!-- User input for Number of Reptitions-->
-							<label for="numberOfRepetitions">Repetitions</label>
-							<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0">
-
-							<!-- User input for Duration of Exercise-->
-							<!-- Timer function needed here-->
+						<!-- User input for Duration of Exercise-->
+						<!-- Timer function needed here-->
 							
-						</form>
-					</div>
+					</form>
 				</div>
-
+				
+				<button id="toggleElement">Add Reps</button>
 			</div>
+			
 
 			<div class="View-Reps">
 				<!--Pop Up Here-->
@@ -90,4 +86,8 @@
 		</div>
 	</div>
 </body>
+
+
+<!-- Script is placed after <body> tag as it was loading body before the script and causing errors of "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')"-->
+<script src="script.js"></script>
 </html>
