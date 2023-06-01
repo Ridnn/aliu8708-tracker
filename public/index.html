@@ -48,7 +48,7 @@
 				<button open-modal>Add Reps Modal</button>
 				<dialog>
 					<h2>Add Your Repetitions</h2>
-					<form>
+					<form id="workoutRepForm" acition="script.js" method="post">
 						<!-- User input for Exercise Category-->
 						<label for="exerciseCategory">Category</label>
 						<select name="categories" id="exerciseCategory">
@@ -81,12 +81,12 @@
 						<label for="durationOfRepetitions">Duration</label>
 						<input type="number" name="durationOfRepetitions" id="durationOfRepetitions" min="0">
 
-						<!-- Timer function needed here-->
 						<input type="submit" value="Submit">
 					</form>
 					<button close-modal>Cancel</button>
+					
 				</dialog>
-				
+				<button onclick="printFormValue();">Print</button>
 				
 			</div>
 			
