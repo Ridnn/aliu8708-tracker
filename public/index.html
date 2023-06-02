@@ -36,7 +36,7 @@
 
 			<div class="Timer">
 				<!--Timer Object Here-->
-				<span id="second"></span>
+				<span id="second"></span><p>seconds</p>
 				<button id="timerStartButton">Start</button> 
 				<button id="timerStopButton">Stop</button> 
 				<button id="timerResetButton">Reset</button> 
@@ -48,10 +48,11 @@
 				<button open-modal>Add Reps Modal</button>
 				<dialog>
 					<h2>Add Your Repetitions</h2>
-					<form id="workoutRepForm" acition="script.js" method="post">
+					<form id="workoutRepForm" method="post">
 						<!-- User input for Exercise Category-->
 						<label for="exerciseCategory">Category</label>
-						<select name="categories" id="exerciseCategory">
+						<select name="exerciseCategory" id="exerciseCategory">
+							<option disabled selected hidden>Choose Exercise Category</option>
 							<option value="squat">Squat-Type Movement</option>
 							<option value="horizontalPress">Horizontal Press</option>
 							<option value="verticalPress">Vertical Press</option>
@@ -61,11 +62,12 @@
 
 						<!-- User input for Name of Exercise-->
 						<label for="exerciseName">Exercise</label>
-						<input type="text" id="exerciseName" name="exerciseName">
+						<input type="text" id="exerciseName" name="exerciseName" placeholder="Enter exercise name">
 
 						<!-- User input for Exercise Difficulty-->
 						<label for="exerciseDifficulty">Difficulty</label>
-						<select name="difficulty" id="exerciseDifficulty">
+						<select name="exerciseDifficulty" id="exerciseDifficulty">
+							<option disabled selected hidden>Rate the exercise difficulty</option>
 							<option value="1">1 - Very Easy</option>
 							<option value="2">2 - Easy</option>
 							<option value="3">3 - Neutral</option>
@@ -75,18 +77,18 @@
 
 						<!-- User input for Number of Reptitions-->
 						<label for="numberOfRepetitions">Repetitions</label>
-						<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0">
+						<input type="number" name="numberOfRepetitions" id="numberOfRepetitions" min="0" placeholder="Enter the no. of reps">
 
 						<!-- User input for Duration of Exercise-->
 						<label for="durationOfRepetitions">Duration</label>
-						<input type="number" name="durationOfRepetitions" id="durationOfRepetitions" min="0">
+						<input type="number" name="durationOfRepetitions" id="durationOfRepetitions" min="0" placeholder="Enter the duration of the reps">
 
-						<input type="submit" value="Submit">
+						<input type="submit" value="Submit" id="submit">
 					</form>
 					<button close-modal>Cancel</button>
 					
 				</dialog>
-				<button onclick="printFormValue();">Print</button>
+				<button onclick="retrieveWorkoutLocal();">Retrieve</button>
 				
 			</div>
 			
