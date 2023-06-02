@@ -1,7 +1,5 @@
-/* hello */
-
 /*
-From lines 6-44 have been created by using a grid geneerator on layoutit.com
+From lines 6-63have been created by using a grid geneerator on layoutit.com
 The following template can be viewed here: https://grid.layoutit.com/?id=3T2HrHx
 */
 
@@ -24,7 +22,8 @@ The following template can be viewed here: https://grid.layoutit.com/?id=3T2HrHx
 	}
 
 .Dashboard {  
-  background-color: red;
+  background-color: #B80000;
+  border-radius: 1.5em 1.5em 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1.5fr 1fr;
@@ -39,29 +38,115 @@ The following template can be viewed here: https://grid.layoutit.com/?id=3T2HrHx
 
 .Recent-Reps { 
   grid-area: Recent-Reps;
-  background-color: purple; 
+  background-color: white; 
 }
 .Calendar {
   grid-area: Calendar;
-  background-color: darkblue; 
+  background-color: white; 
 }
 .Timer { 
   grid-area: Timer; 
-  background-color: cyan;
+  background-color: white;
 }
 .Add-Reps { 
   grid-area: Add-Reps; 
-  background-color: green;
+  background-color: #B80000;
 }
 .View-Reps { 
   grid-area: View-Reps; 
-  background-color: yellow;
+  background-color: #B80000;
 }
 .Name { 
   grid-area: Name; 
-  background-color: orange;
+  background-color: #B80000;
+  border-radius: 1.5em 1.5em 0 0;
 }
 
 body {
 	background-color: grey;
+}
+
+
+#titleOne {
+  margin-bottom: 0;
+}
+
+#titleTwo {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  padding-left: 50px;
+}
+
+h2 {
+  padding-left: 3mm;
+}
+
+.Name > h2 {
+  color: white;
+  margin-bottom: 0;
+}
+
+.Name > h3 {
+  color: white;
+  padding-left: 3mm;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.Recent-Reps > h3 {
+  text-align: center;
+}
+
+.Calendar > span {
+  display: table;
+  margin: 0 auto;
+}
+
+span#calendar {
+  color: #B80000;
+  font-weight: bold;
+  font-size: 3em;
+  
+}
+
+span#time {
+  font-size: 2em;
+}
+
+span#second {
+  color: #B80000;
+  font-weight: bold;
+  font-size: 2em;
+  
+}
+
+div > p {
+  font-size: 2em;
+  display: inline;
+}
+
+#timerStartButton, #timerStopButton, #timerResetButton {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.Add-Reps > button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.View-Reps > button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 3em;
 }

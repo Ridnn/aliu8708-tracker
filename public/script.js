@@ -111,5 +111,3 @@ function retrieveWorkoutLocal() {
     console.log(workoutInfo);
   }
 }
-
-// innerHTML + retriving object onto spans similar to seconds in timer function
